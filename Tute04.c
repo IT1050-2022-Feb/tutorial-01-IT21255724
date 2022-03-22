@@ -4,45 +4,56 @@ Implement the three functions minimum(), maximum() and multiply() below the main
 
 Do not change the code given in the main() function when you are implementing your solution.*/
 
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int minimum(int no1, int no2);
-int maximum(int no1, int no2);
-int multiply(int no1, int no2);
+int minimum(int x, int y);
+int maximum(int x, int y);
+int multiply(int x, int y);
 
-int main() {
-   int no1, no2, Minimum, Maximum, Multiply;
-  
-   printf("Enter a value for no 1 : ");
-   scanf("%d", &no1);
-  
-   printf("Enter a value for no 2 : ");
-   scanf("%d", &no2);
-
-  Minimum = minimum(no1, no2);
-  Maximum = maximum(no1, no2);
-  
-  
-   printf("%d ", minimum(no1, no2));
-  
-   printf("%d ", maximum(no1, no2));
-  
-   printf("%d ", multiply(no1, no2));
-  
-   return 0;
+int main() 
+{
+	int n1, n2;
+	
+	cout<<"Enter a value for no 1 : ";
+	cin>>n1;
+	
+	cout<<"Enter a value for no 2 : ";
+	cin>>n2;
+	
+	cout<<"Minimum is: "minimum(n1, n2)<<endl;
+	cout<<"Maximum is: "maximum(n1, n2)<<endl;
+	cout<<"Multiply is: "multiply(n1, n2)<<endl;
+	
+	return 0;
 }
 
-int minimum(int no1, int no2)
+int minimum(int x, int y)
 {
-  return (no1 > no2 ) ? no1 : no2;
+	if (x > y)
+	{
+		return y;
+	} 
+	else
+	{
+		return x;
+	}
 }
 
-int minimum(int no1, int no2) 
+int maximum(int x, int y)
 {
-    return (no1 > no2 ) ? no2 : no1;
+	if (x > y)
+	{
+		return x;
+	} 
+	else
+	{
+		return y;
+	}
 }
 
-int multiply(int no1, int no2)
+
+int multiply(int x, int y)
 {
-  
+	return (x * y);
 }
